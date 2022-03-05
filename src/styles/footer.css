@@ -1,0 +1,41 @@
+.company p {
+  color: #467805;
+  padding: 0 0 20px 0;
+  font-size: clamp(12px, 2vw, 18px);
+}
+
+.company {
+  padding: 30px;
+}
+.company_name {
+  font-weight: bold;
+  padding: 0 0 15px 0 !important;
+}
+
+/* マイクログリーンの画像のスライドショー */
+
+.wrap {
+    display: flex;
+    align-items: center;
+  height: 200px;
+  overflow: hidden;
+  }
+  .slideshow {
+    display: flex;
+    animation: loop-slide 1000s infinite linear 0s both;
+  }
+  .img_micro_green {
+    
+    height: 200px;
+    margin: 0px 0px 20px;
+    animation: loop-slide 100s infinite linear 1s both;
+    object-fit:cover;
+  }
+  @keyframes loop-slide {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }

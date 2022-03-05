@@ -1,0 +1,228 @@
+@import "https://use.fontawesome.com/releases/v5.13.0/css/all.css";
+nav {
+  text-align: center;
+}
+
+#g_nav ul {
+  margin: 50px 0 30px;
+  position: relative;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+#g_nav ul ul {
+  display: block;
+}
+
+.nav_child a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: #999;
+  padding: 10px;
+  transition: all 0.3s;
+  font-size: clamp(13px, 1.8vw, 20px);
+}
+span{
+  font-size: 10px;
+}
+/* .nav_child a:before{
+    content: "";
+    position: absolute;
+    padding: 0 10px 0 20px;
+    left:15px;
+    top:25px;
+    width:6px;
+    height:6px;
+    transform:rotate(135deg);
+    border-top:2px solid ;
+  } */
+
+.nav_child a:after {
+  content: "/";
+  padding: 0 0px 0 20px;
+}
+
+
+/* ボタンの実装 */
+/*まずはお決まりのボックスサイズ算出をborer-boxに */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;/*rem算出をしやすくするために*/
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #212529;
+  border-radius: 0.5rem;
+}
+.btn--orange,
+a.btn--orange {
+  color: #fff;
+  background-color: #79b607;
+}
+.btn--orange:hover,
+a.btn--orange:hover {
+  color: #343434;
+  background: #c9e75b;
+}
+
+/* マイクログリーンの画像のスライドショー */
+
+.wrap {
+  display: flex;
+  align-items: center;
+height: 200px;
+overflow: hidden;
+}
+.slideshow {
+  display: flex;
+  animation: loop-slide 1000s infinite linear 0s both;
+}
+.img_micro_greens {
+  
+  height: 200px;
+  margin: 0px 0px 20px;
+  animation: loop-slide 60s infinite linear 1s both;
+  object-fit:cover;
+}
+@keyframes loop-slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+/* 商品の一覧 */
+
+.products_area {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+.products_list {
+  width: 80%;
+}
+.products img {
+  width: 100%;
+  border-radius: 20px;
+}
+.products {
+  margin: 50px 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.detail {
+  width: 30%;
+  margin: 0px 0px 60px;
+}
+.products:after {
+  content: "";
+  display: block;
+  width: 30%; /* .boxに指定したwidthと同じ幅を指定する */
+  height: 0;
+}
+.detail p {
+  font-size: clamp(13px, 1.7vw, 19px);
+  padding-top: 15px;
+}
+
+/* カテゴリ関係 */
+.category {
+  background-color: #fff;
+  padding: 30px;
+  margin: 30px 0px;
+  border-radius: 10px;
+  font-size: clamp(12px, 2vw, 16px);
+}
+.category p {
+  margin: 0px 0px 20px;
+  border-bottom: 1px;
+  border-bottom: 3px solid #467706;
+  padding-bottom: 10px;
+}
+
+.category_list li {
+  padding: 15px 0px 15px;
+  border-bottom: 1px solid #999;
+}
+
+@media (min-width: 768px) {
+  nav {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .login_category {
+    display: none;
+  }
+  .products_area {
+    margin: 5px;
+  }
+  .products {
+    margin: 10px;
+  }
+  .products_area {
+    width: 100%;
+  }
+  .products_list {
+    width: 95%;
+  }
+  .detail {
+    width: 45%;
+    margin: 3px 0px 20px;
+  }
+
+  .detail p {
+    font-size: clamp(12px, 1.8vw, 19px);
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav_child a {
+    padding: 5px;
+
+    font-size: clamp(12px, 1.8vw, 20px);
+  }
+
+  .nav_child a:after {
+    content: "/";
+    padding: 0 0px 0 10px;
+  }
+
+  .detail p {
+    font-size: clamp(10px, 1.8vw, 19px);
+    padding-top: 8px;
+  }
+}

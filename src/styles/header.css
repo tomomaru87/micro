@@ -1,0 +1,35 @@
+.header_images {
+  width: 100%;
+}
+.header_images .header_leaf {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  left: 0;
+  margin-bottom: 80px;
+  object-fit: cover;
+}
+
+.logo {
+  position: absolute;
+  width: clamp(250px, 80vw, 350px);
+  text-align: center;
+  margin: 0px auto;
+  top: 230px;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+}
+
+@media (max-width: 650px) {
+}
+
+@media (max-width: 450px) {
+}
