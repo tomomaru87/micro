@@ -17,12 +17,20 @@ import Footer from './components/template/Footer.vue'
 
 
 export default {
+  head:{
+meta:[
+  {
+    name:"robots",content:"noindex"
+  }
+]
+  },
   name: 'App',
   components: {
 
     Header,
     Footer,
   }
+  
 }
 </script>
 
